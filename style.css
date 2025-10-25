@@ -163,3 +163,40 @@ body.servicios-page .carousel-img-servicios {
   display: block;
   border-radius: 8px;
 }
+
+/* ==== EFECTOS DE ANIMACIÓN AOS (unificados para todas las páginas) ==== */
+[data-aos] {
+  transition-property: transform, opacity !important;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(40px);
+  opacity: 0;
+}
+[data-aos="fade-up"].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+[data-aos="fade-down"] {
+  transform: translateY(-40px);
+  opacity: 0;
+}
+[data-aos="fade-down"].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+[data-aos="zoom-in"] {
+  transform: scale(0.9);
+  opacity: 0;
+}
+[data-aos="zoom-in"].aos-animate {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* ==== SUAVIDAD GENERAL ==== */
+html {
+  scroll-behavior: smooth;
+}
